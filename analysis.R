@@ -1,0 +1,1 @@
+data <- read.csv("data/RootGrowth.csv", stringsAsFactors = F)
