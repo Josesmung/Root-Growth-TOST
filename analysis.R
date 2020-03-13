@@ -14,16 +14,19 @@ WTmean <- mean(WildType)
 
 theta <- log(x = 1.25)
 
+theta_test <- 1.823
+SD_test <- (VD3sd + WTsd) / 2
+
 print(TOSTtwo.raw(
   m1 = VD3mean,
   m2 = WTmean,
   sd1 = VD3sd, 
   sd2 = WTsd,
   n1 = length(WildType), n2 = length(VD3),
-  low_eqbound = -theta,
-  high_eqbound = theta,
+  low_eqbound = -theta_test,
+  high_eqbound = theta_test,
   alpha = 0.05,
-  var.equal = TRUE,
+  var.equal = FALSE,
   plot = TRUE
 ))
 
